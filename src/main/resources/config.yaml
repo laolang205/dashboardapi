@@ -1,0 +1,23 @@
+ message: raaa
+ 
+ database:
+    driverClass: com.mysql.jdbc.Driver
+    user: dwadmin
+    password: dw@iou.1024
+    url: jdbc:mysql://42.62.29.242:3306/dashboard
+
+
+
+ logging:
+  appenders:
+    - type: console
+      threshold: INFO
+      target: stdout
+      timeZone: Asia/Shanghai
+
+    - type: file
+      threshold: INFO
+      currentLogFilename: ./logs/test.log
+      archivedLogFilenamePattern: ./logs/test.log-%d{yyyy-MM-dd-hh}.log
+      archivedFileCount: 240  
+      timeZone: Asia/Shanghai
